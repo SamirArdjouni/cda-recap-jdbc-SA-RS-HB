@@ -5,6 +5,7 @@ CREATE TABLE piece(
    dateRecup DATE,
    dateVente DATE,
    prixVente INT,
+   quantite INT,
    PRIMARY KEY(Id_piece)
 );
 
