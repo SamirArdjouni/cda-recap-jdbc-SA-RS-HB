@@ -4,32 +4,32 @@ import java.sql.Date;
 
 public class Pieces {
 
-	private int idPiece;
+	private int idPieces;
 	private String reference;
 	private String categorie;
 	private Date dateRecup;
-	private Date dateVente;
-	private float prixVente;
+	private float prixUnitaire;
 	private int quantite;
 	private int idVehicule;
 	
-	public Pieces(String reference, String categorie, Date dateRecup, Date dateVente, float prixVente, int quantite, int idVehicule) {
-			
+	public Pieces(int idPieces, String reference, String categorie, Date dateRecup, float prixUnitaire, int quantite,
+			int idVehicule) {
+		super();
+		this.idPieces = idPieces;
 		this.reference = reference;
 		this.categorie = categorie;
 		this.dateRecup = dateRecup;
-		this.dateVente = dateVente;
-		this.prixVente = prixVente;
+		this.prixUnitaire = prixUnitaire;
 		this.quantite = quantite;
 		this.idVehicule = idVehicule;
 	}
 
-	public int getIdPiece() {
-		return idPiece;
+	public int getIdPieces() {
+		return idPieces;
 	}
 
-	public void setIdPiece(int idPiece) {
-		this.idPiece = idPiece;
+	public void setIdPieces(int idPieces) {
+		this.idPieces = idPieces;
 	}
 
 	public String getReference() {
@@ -56,20 +56,12 @@ public class Pieces {
 		this.dateRecup = dateRecup;
 	}
 
-	public Date getDateVente() {
-		return dateVente;
+	public float getPrixUnitaire() {
+		return prixUnitaire;
 	}
 
-	public void setDateVente(Date dateVente) {
-		this.dateVente = dateVente;
-	}
-
-	public float getPrixVente() {
-		return prixVente;
-	}
-
-	public void setPrixVente(float prixVente) {
-		this.prixVente = prixVente;
+	public void setPrixUnitaire(float prixUnitaire) {
+		this.prixUnitaire = prixUnitaire;
 	}
 
 	public int getQuantite() {
@@ -79,7 +71,6 @@ public class Pieces {
 	public void setQuantite(int quantite) {
 		this.quantite = quantite;
 	}
-
 
 	public int getIdVehicule() {
 		return idVehicule;
@@ -91,10 +82,14 @@ public class Pieces {
 
 	@Override
 	public String toString() {
-		return "Pieces [idPiece=" + idPiece + ", reference=" + reference + ", categorie=" + categorie + ", dateRecup="
-				+ dateRecup + ", dateVente=" + dateVente + ", prixVente=" + prixVente + ", quantite=" + quantite
-				+ ", idVehicule=" + idVehicule + "]";
+		return "Pieces [idPieces=" + idPieces + ", reference=" + reference + ", categorie=" + categorie + ", dateRecup="
+				+ dateRecup + ", prixUnitaire=" + prixUnitaire + ", quantite=" + quantite + ", idVehicule=" + idVehicule
+				+ "]";
 	}
+	
+
+
+
 
 
 }

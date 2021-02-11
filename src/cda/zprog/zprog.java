@@ -1,16 +1,20 @@
 package cda.zprog;
+
 import static cda.menu.ihm.Ihm.IHM_INS;
+
 import java.util.TreeMap;
+
 import cda.menu.action.Action;
 import cda.menu.action.LesActions;
 
 public class zprog {
-	
+
 	public static void main(String[] args) {
 		TreeMap<Integer, Action> actions = new TreeMap<>();
 		ajouterAction(actions, LesActions.ACTION_INTROUVABLE);
 		ajouterAction(actions, LesActions.QUITTER);
-	
+		ajouterAction(actions, LesActions.CRUD_CATEGORIE_PIECE);
+
 		boolean vContinuer;
 		int vActionSaisie;
 		do {
@@ -22,6 +26,7 @@ public class zprog {
 			vContinuer = actions.getOrDefault(vActionSaisie, LesActions.ACTION_INTROUVABLE).executer();
 		} while (vContinuer);
 	}
+
 	private static void ajouterAction(TreeMap<Integer, Action> actions, Action pAction) {
 		actions.put(pAction.getId(), pAction);
 	}
