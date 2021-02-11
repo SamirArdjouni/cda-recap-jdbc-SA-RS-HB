@@ -1,17 +1,18 @@
 package cda.menu.action;
 
+import cda.Dao.CrudCategoriePieceDAO;
+import cda.menu.model.CategorieDaoImpl;
+
 public abstract class Action {
 	
 	protected final int id;
 	protected final String description;
-//	protected VilleDAO villeDAO;
-//	protected PaysDAO paysDAO;
+	protected CrudCategoriePieceDAO catDAO;
 	
 	protected Action(int pId, String pDescription) {
 		this.id = pId;
 		this.description = pDescription;
-//		this.villeDAO = new VilleDaoImpl();
-//		this.paysDAO = new PaysDaoImpl();
+		this.catDAO = new CategorieDaoImpl();
 	}
 	
 	public abstract boolean executer();
