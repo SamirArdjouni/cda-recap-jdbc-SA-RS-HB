@@ -31,9 +31,32 @@ INSERT INTO PIECES (reference, idCategorie, dateRecup, prixUnitaire, quantite, i
 INSERT INTO PIECES (reference, idCategorie, dateRecup, prixUnitaire, quantite, idVehicule) VALUES ('Courroie-TD720', 2, '2020/12/03', 350, 4, 7);
 
 
-insert into vente (quantite, dateVente, IdPieces) values (7,'2020/12/03',1);
+insert into vente (quantite, dateVente, IdPieces) values (7,'2019/12/03',1);
 insert into vente (quantite, dateVente, IdPieces) values (2,'2020/12/03',2);
-insert into vente (quantite, dateVente, IdPieces) values (4,'2020/12/03',3);
-insert into vente (quantite, dateVente, IdPieces) values (2,'2020/12/03',4);
-insert into vente (quantite, dateVente, IdPieces) values (5,'2020/12/03',5);
+insert into vente (quantite, dateVente, IdPieces) values (4,'2020/12/13',3);
+insert into vente (quantite, dateVente, IdPieces) values (2,'2021/02/03',4);
+insert into vente (quantite, dateVente, IdPieces) values (5,'2021/01/23',5);
+
+select * from pieces;
+SELECT * FROM vente where dateVente = '2021/01/23';
+SELECT * FROM vente where dateVente = ?;
+
+
+select year(dateVente) as year from vente 
+group by year order by year;
+ 
+,sum(quantite*quantite) 
+group by year
+
+select year(dateVente)as year from vente 
+group by year 
+order by year;
+
+
+
+
+
+
+
+
 

@@ -38,6 +38,19 @@ CREATE TABLE PIECES(
    FOREIGN KEY(idCategorie) REFERENCES categorie(idCategorie)
 );
 
+/*- sortir un tableau listant le nombre et la somme totale des prix pièces disponibles
+ (pas encore vendues)  par modèle de véhicule*/
+
+ /*sortir un tableau listant le nombre et la somme totale des des prix pièces disponibles(pas encore vendues)
+par modèle de véhicule ---> - sortir un tableau listant le nombre et la somme totale du prix des pièces
+ disponibles(pas encore vendues)  par modèle de véhicule.*/
+
+select modele,sum(quantite) as totalPiecesDispo,
+	sum(quantite*prixUnitaire) as SommeTotalePrixPiecesDispoParModele from pieces 
+	natural join vehicule  
+	natural join catalogueVehicules
+	group by modele;
+
 CREATE TABLE vente(
    IdVente INT auto_increment not null,
    quantite INT,
