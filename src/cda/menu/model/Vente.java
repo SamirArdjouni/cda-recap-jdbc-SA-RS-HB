@@ -5,6 +5,7 @@ public class Vente {
 	private int idVente;
 	private int quantite;
 	private String dateVente;
+	private int idPiece;
 	
 	public Vente(int idVente, int quantite, String dateVente) {
 		this.idVente = idVente;
@@ -13,10 +14,16 @@ public class Vente {
 	}
 	
 	public Vente(String string) {
-		
 		this.dateVente = string;
 	}
 
+	public Vente(int idVente, int quantite, String dateVente, int idPiece) {
+		this.idVente = idVente;
+		this.quantite = quantite;
+		this.dateVente = dateVente;
+		this.idPiece = idPiece;
+	}
+	
 	public int getIdVente() {
 		return idVente;
 	}
@@ -45,5 +52,14 @@ public class Vente {
 	public String toString() {
 		return "Vente [idVente=" + idVente + ", quantite=" + quantite + ", dateVente=" + dateVente + "]";
 	}
+
+	public int getIdPiece() {
+		return idPiece;
+	}
+
+	public void setIdPiece(int idPiece) {
+		this.idPiece = idPiece;
+	}
+
 	
 }
