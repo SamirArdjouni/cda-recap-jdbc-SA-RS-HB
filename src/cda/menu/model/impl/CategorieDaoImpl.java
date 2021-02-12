@@ -49,12 +49,6 @@ public class CategorieDaoImpl implements CrudCategoriePieceDAO {
 				ResultSet r = statement.executeQuery();
 
 				while (r.next()) {
-//					String v = r.getString(0);
-//					String v2 = r.getString(2);
-//					String [] tab =  new String [2];
-//					tab[0]=v;
-//					tab[1]=v2;
-//					return tab;
 					categorie.add(new Categorie(r.getInt("idCategorie"), r.getString("libelle")));
 					
 				}

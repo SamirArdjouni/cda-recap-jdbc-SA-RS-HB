@@ -38,21 +38,32 @@ insert into vente (quantite, dateVente, IdPieces) values (2,'2021/02/03',4);
 insert into vente (quantite, dateVente, IdPieces) values (5,'2021/01/23',5);
 
 select * from pieces;
-SELECT * FROM vente where dateVente = '2021/01/23';
-SELECT * FROM vente where dateVente = ?;
+select * from vente;
+select * from catalogueVehicules;
+select * from vehicule;
 
 
-select year(dateVente) as year from vente 
-group by year order by year;
- 
-,sum(quantite*quantite) 
-group by year
-
-select year(dateVente)as year from vente 
-group by year 
-order by year;
+select year(dateVente) as année, quantite from vente 
+group by year(dateVente)
+order by year(dateVente);
 
 
+select  reference, dateVente  from pieces
+natural join vente;
+
+
+select modele,sum(quantite) as totalPiecesDispo, 
+sum(quantite*prixUnitaire) as SommeTotalePrixPiecesDispoParModele 
+from pieces 
+natural join vehicule 
+natural join catalogueVehicule 
+group by modele;
+
+
+select year(dateVente) as année, prixUnitaire from vente 
+natural join pieces 
+group by year(dateVente)
+order by year(dateVente);
 
 
 

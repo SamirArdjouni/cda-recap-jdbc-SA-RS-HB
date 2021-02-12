@@ -4,16 +4,19 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import cda.Dao.StockPiecesDAO;
 import cda.connexion.MyConnection;
+import cda.menu.model.StockPieceModel;
 
 public class StockPiecesDaoImpl implements StockPiecesDAO {
 
 	@Override
-	public String[] affichageStockPiecesParModele() {
+	public List<StockPieceModel> affichageStockPiecesParModele() {
 
-		String[] tab = new String[3];
+		List<StockPieceModel> stockPiece = new ArrayList<>();
 		Connection c = MyConnection.getConnection();
 
 		if (c != null) {
@@ -26,19 +29,15 @@ public class StockPiecesDaoImpl implements StockPiecesDAO {
 				ResultSet r = statement.executeQuery();
 
 				while (r.next()) {
-					String modele = r.getString(1);
-					String totalPiecesDispo = r.getString(2);
-					String SommeTotalePrixPiecesDispoParModele = r.getString(3);
-					tab[0] = modele;
-					tab[1] = totalPiecesDispo;
-					tab[2] = SommeTotalePrixPiecesDispoParModele;
 
+					stockPiece.add(new StockPieceModel(r.getString("modele"), r.getString("totalPiecesDispo"),
+							r.getString("SommeTotalePrixPiecesDispoParModele")));
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}
-		return tab;
+		return stockPiece;
 	}
 
 }

@@ -1,6 +1,10 @@
 package cda.Dao;
 
+import java.util.List;
+
+import cda.menu.model.StockPieceModel;
+
 public interface StockPiecesDAO {
-45
-	String[] affichageStockPiecesParModele();
+
+	List<StockPieceModel> affichageStockPiecesParModele();
 }

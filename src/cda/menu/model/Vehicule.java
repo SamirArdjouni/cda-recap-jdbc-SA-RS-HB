@@ -6,7 +6,6 @@ public class Vehicule {
 	private String immat;
 	
 	public Vehicule(int idVehicule, String immat) {
-		super();
 		this.idVehicule = idVehicule;
 		this.immat = immat;
 	}
