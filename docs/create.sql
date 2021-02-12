@@ -6,6 +6,10 @@ CREATE TABLE catalogueVehicules(
    PRIMARY KEY(idCatalogue)
 );
 
+UPDATE catalogueVehicules SET marque='bmw',annee='2021/08/04', modele='serie 5' where modele = 'serie 5';
+DELETE FROM CatalogueVehicules WHERE modele='samir';
+insert into CatalogueVehicules (marque, annee, modele) values ('bmw','2018-05-12','serie 5');
+
 CREATE TABLE vehicule(
    idVehicule INT auto_increment not null,
    immat VARCHAR(50),

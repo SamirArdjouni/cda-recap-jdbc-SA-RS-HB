@@ -16,4 +16,6 @@ final class ActionIntrouvable extends Action {
 		IHM_INS.afficher("> votre saisie est incorrecte.");
 		return Boolean.TRUE;
 	}
+
+	
 }

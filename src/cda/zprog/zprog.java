@@ -14,6 +14,9 @@ public class zprog {
 		ajouterAction(actions, LesActions.ACTION_INTROUVABLE);
 		ajouterAction(actions, LesActions.QUITTER);
 		ajouterAction(actions, LesActions.CRUD_CATEGORIE_PIECE);
+		ajouterAction(actions, LesActions.CRUD_CATALOGUE_VEHICULES);
+		ajouterAction(actions, LesActions.DATE_VENTE_PIECE);
+		ajouterAction(actions, LesActions.STOCK_PIECES);
 
 		boolean vContinuer;
 		int vActionSaisie;

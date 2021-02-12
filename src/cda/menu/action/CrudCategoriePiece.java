@@ -12,16 +12,15 @@ public class CrudCategoriePiece extends Action {
 
 	private static final int ID = 1;
 	private static final String DESC = "CRUD categorie piece";
-//	private CrudCategoriePieceDAO catDao;
-
+	
+	Scanner sc = new Scanner(System.in);
+	
 	public CrudCategoriePiece() {
 		super(ID, DESC);
 	}
 
 	@Override
 	public boolean executer() {
-
-		Scanner sc = new Scanner(System.in);
 
 		IHM_INS.afficher("Saisissez l'action à realiser :");
 		System.out.println("1 : créer une catégorie :");
@@ -56,27 +55,25 @@ public class CrudCategoriePiece extends Action {
 				});
 			}
 			break;
-			
-			
+
 		case 3:
 			System.out.println("Saisissez la catégorie à modifier");
 			System.out.print("  < ");
 			String libelleToModif = sc.next();
-			
+
 			System.out.println("Saisissez son nouveau nom");
 			System.out.print("  < ");
 			String libelleUpdated = sc.next();
-			
-			boolean isModif = this.catDAO.ModifierCategorie(new Categorie(libelleToModif,libelleUpdated));
-			
+
+			boolean isModif = this.catDAO.ModifierCategorie(new Categorie(libelleToModif, libelleUpdated));
+
 			if (isModif) {
 				System.out.println("  > " + libelleToModif + " modifiée avec succès !");
 			} else {
 				System.out.println("  > ! ERREUR : il y a encore des villes inscrites dans la BDD concernant ce Pays");
 			}
 			break;
-			
-			
+
 		case 4:
 			System.out.println("Saisissez la catégorie à  supprimer");
 			System.out.print("  < ");
@@ -94,5 +91,4 @@ public class CrudCategoriePiece extends Action {
 
 		return Boolean.TRUE;
 	}
-
 }

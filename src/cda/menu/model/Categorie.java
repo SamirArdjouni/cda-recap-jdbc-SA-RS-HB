@@ -6,6 +6,7 @@ public class Categorie {
 	private String libelle;
 	private String newLib;
 	
+	
 	public Categorie(String libelle) {
 		this.libelle = libelle;
 	}
@@ -19,7 +20,6 @@ public class Categorie {
 		this.libelle = libelle;
 		this.newLib = newLib;
 	}
-	
 	
 
 	public int getIdCategorie() {
