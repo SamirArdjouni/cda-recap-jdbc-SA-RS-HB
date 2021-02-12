@@ -4,11 +4,13 @@ import cda.Dao.CAparAnneeDAO;
 import cda.Dao.CrudCatalogueVehiculesDAO;
 import cda.Dao.CrudCategoriePieceDAO;
 import cda.Dao.DateVentePieceDAO;
+import cda.Dao.EnregistrerVenteDAO;
 import cda.Dao.StockPiecesDAO;
 import cda.menu.model.impl.CAparAnneeDaoImpl;
 import cda.menu.model.impl.CatalogueVehiculesDaoImpl;
 import cda.menu.model.impl.CategorieDaoImpl;
 import cda.menu.model.impl.DateVentePieceDaoImpl;
+import cda.menu.model.impl.EnregistrerVenteDAOImpl;
 import cda.menu.model.impl.StockPiecesDaoImpl;
 
 public abstract class Action {
@@ -20,6 +22,7 @@ public abstract class Action {
 	protected DateVentePieceDAO pieceDAO;
 	protected StockPiecesDAO stockPiecesDAO;
 	protected CAparAnneeDAO caparAnneeDAO;
+	protected EnregistrerVenteDAO recordSaleDAO;
 
 	protected Action(int pId, String pDescription) {
 		this.id = pId;
@@ -29,6 +32,8 @@ public abstract class Action {
 		this.pieceDAO = new DateVentePieceDaoImpl();
 		this.stockPiecesDAO = new StockPiecesDaoImpl();
 		this.caparAnneeDAO = new CAparAnneeDaoImpl();
+		this.recordSaleDAO = new EnregistrerVenteDAOImpl();
+		
 	}
 
 	public abstract boolean executer();

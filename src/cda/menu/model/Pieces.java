@@ -5,19 +5,32 @@ import java.util.Date;
 public class Pieces {
 
 	private int idPieces;
-	private String reference;
+	private int reference;
+	private String referenceString;
 	private String categorie;
 	private Date dateRecup;
 	private int quantite;
+	private float prixUnitaire;
 	
-	public Pieces(int idPieces, String reference, String categorie, Date dateRecup, int quantite) {
+
+
+	public Pieces(int idPieces, int reference, String categorie, Date dateRecup, int quantite) {
 		
 		this.idPieces = idPieces;
 		this.reference = reference;
 		this.categorie = categorie;
 		this.dateRecup = dateRecup;
 		this.quantite = quantite;
+		
 	}
+
+	public Pieces(String referenceString, float prixUnitaire, int quantite) {
+		this.referenceString = referenceString;
+		this.prixUnitaire =prixUnitaire;
+		this.quantite = quantite;
+	}
+
+
 
 	public int getIdPieces() {
 		return idPieces;
@@ -27,11 +40,11 @@ public class Pieces {
 		this.idPieces = idPieces;
 	}
 
-	public String getReference() {
+	public int getReference() {
 		return reference;
 	}
 
-	public void setReference(String reference) {
+	public void setReference(int reference) {
 		this.reference = reference;
 	}
 
@@ -63,6 +76,13 @@ public class Pieces {
 	public String toString() {
 		return "Pieces [idPieces=" + idPieces + ", reference=" + reference + ", categorie=" + categorie + ", dateRecup="
 				+ dateRecup + ", quantite=" + quantite + "]";
+	}
+	public float getPrixUnitaire() {
+		return prixUnitaire;
+	}
+
+	public void setPrixUnitaire(float prixUnitaire) {
+		this.prixUnitaire = prixUnitaire;
 	}
 	
 }

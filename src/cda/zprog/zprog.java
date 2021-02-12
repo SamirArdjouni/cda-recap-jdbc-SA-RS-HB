@@ -18,6 +18,7 @@ public class zprog {
 		ajouterAction(actions, LesActions.DATE_VENTE_PIECE);
 		ajouterAction(actions, LesActions.STOCK_PIECES);
 		ajouterAction(actions, LesActions.CA_PAR_ANNEE);
+		ajouterAction(actions, LesActions.ENREGISTRER_VENTE);
 
 		boolean vContinuer;
 		int vActionSaisie;
