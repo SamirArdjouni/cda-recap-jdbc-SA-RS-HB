@@ -1,6 +1,6 @@
 package cda.menu.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Pieces {
 
@@ -8,20 +8,15 @@ public class Pieces {
 	private String reference;
 	private String categorie;
 	private Date dateRecup;
-	private float prixUnitaire;
 	private int quantite;
-	private int idVehicule;
 	
-	public Pieces(int idPieces, String reference, String categorie, Date dateRecup, float prixUnitaire, int quantite,
-			int idVehicule) {
-		super();
+	public Pieces(int idPieces, String reference, String categorie, Date dateRecup, int quantite) {
+		
 		this.idPieces = idPieces;
 		this.reference = reference;
 		this.categorie = categorie;
 		this.dateRecup = dateRecup;
-		this.prixUnitaire = prixUnitaire;
 		this.quantite = quantite;
-		this.idVehicule = idVehicule;
 	}
 
 	public int getIdPieces() {
@@ -56,14 +51,6 @@ public class Pieces {
 		this.dateRecup = dateRecup;
 	}
 
-	public float getPrixUnitaire() {
-		return prixUnitaire;
-	}
-
-	public void setPrixUnitaire(float prixUnitaire) {
-		this.prixUnitaire = prixUnitaire;
-	}
-
 	public int getQuantite() {
 		return quantite;
 	}
@@ -72,24 +59,10 @@ public class Pieces {
 		this.quantite = quantite;
 	}
 
-	public int getIdVehicule() {
-		return idVehicule;
-	}
-
-	public void setIdVehicule(int idVehicule) {
-		this.idVehicule = idVehicule;
-	}
-
 	@Override
 	public String toString() {
 		return "Pieces [idPieces=" + idPieces + ", reference=" + reference + ", categorie=" + categorie + ", dateRecup="
-				+ dateRecup + ", prixUnitaire=" + prixUnitaire + ", quantite=" + quantite + ", idVehicule=" + idVehicule
-				+ "]";
+				+ dateRecup + ", quantite=" + quantite + "]";
 	}
 	
-
-
-
-
-
 }

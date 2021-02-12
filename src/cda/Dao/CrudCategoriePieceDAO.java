@@ -1,15 +1,17 @@
 package cda.Dao;
 
-import cda.menu.model.Pieces;
+import java.util.List;
+
+import cda.menu.model.Categorie;
 
 public interface CrudCategoriePieceDAO {
 
-	Pieces CreerCategorie(Pieces piece);
+	Categorie CreerCategorie(Categorie categorie);
 
-	void ConsulterCategorie();
-	
-	void ModifierCategorie();
-	
-	void SupprimerCategorie();
-	
-	}
+	List<Categorie> ConsulterCategorie();
+
+	boolean ModifierCategorie(Categorie categorie);
+
+	boolean SupprimerCategorie(String libelle);
+
+}
