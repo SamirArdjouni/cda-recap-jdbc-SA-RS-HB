@@ -15,7 +15,6 @@ public class EnregistrerVente extends Action {
 
 	protected EnregistrerVente() {
 		super(ID, DESC);
-
 	}
 
 	@Override
@@ -36,8 +35,6 @@ public class EnregistrerVente extends Action {
 				System.out.println("  > " + e);
 			});
 		}
-
 		return Boolean.TRUE;
 	}
-
 }
