@@ -9,7 +9,7 @@ import cda.menu.model.Vente;
 
 public class DateVentePiece extends Action {
 
-	private static final int ID = 3;
+	private static final int ID = 4;
 	private static final String DESC = "Afficher date de vente";
 	Scanner sc = new Scanner(System.in);
 

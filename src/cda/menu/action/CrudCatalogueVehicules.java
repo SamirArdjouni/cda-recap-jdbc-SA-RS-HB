@@ -10,7 +10,7 @@ import cda.menu.model.CatalogueVehicules;
 
 public class CrudCatalogueVehicules extends Action {
 
-	private static final int ID = 2;
+	private static final int ID = 3;
 	private static final String DESC = "CRUD catalogues vehicules";
 	
 	Scanner sc = new Scanner(System.in);
