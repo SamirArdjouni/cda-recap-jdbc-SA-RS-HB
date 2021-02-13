@@ -1,5 +1,7 @@
 package cda.menu.model;
 
+
+
 public class Vente {
 
 	private int idVente;

@@ -3,13 +3,17 @@ package cda.menu.action;
 import cda.Dao.CAparAnneeDAO;
 import cda.Dao.CrudCatalogueVehiculesDAO;
 import cda.Dao.CrudCategoriePieceDAO;
+import cda.Dao.CrudPiecesDAO;
 import cda.Dao.DateVentePieceDAO;
+import cda.Dao.EnregistrerVenteDAO;
 import cda.Dao.StockPiecesDAO;
 import cda.Dao.StockVoitureRecenteDAO;
 import cda.menu.model.impl.CAparAnneeDaoImpl;
 import cda.menu.model.impl.CatalogueVehiculesDaoImpl;
 import cda.menu.model.impl.CategorieDaoImpl;
 import cda.menu.model.impl.DateVentePieceDaoImpl;
+import cda.menu.model.impl.EnregistrerVenteDAOImpl;
+import cda.menu.model.impl.PiecesDAOImpl;
 import cda.menu.model.impl.StockPiecesDaoImpl;
 import cda.menu.model.impl.StockVoitureRecenteDAOImpl;
 
@@ -22,7 +26,12 @@ public abstract class Action {
 	protected DateVentePieceDAO pieceDAO;
 	protected StockPiecesDAO stockPiecesDAO;
 	protected CAparAnneeDAO caparAnneeDAO;
+<<<<<<< HEAD
 	protected StockVoitureRecenteDAO stockVoitureRecenteDAO; 
+=======
+	protected EnregistrerVenteDAO recordSaleDAO;
+	protected CrudPiecesDAO crudPiecesDAO;
+>>>>>>> main
 
 	protected Action(int pId, String pDescription) {
 		this.id = pId;
@@ -32,7 +41,14 @@ public abstract class Action {
 		this.pieceDAO = new DateVentePieceDaoImpl();
 		this.stockPiecesDAO = new StockPiecesDaoImpl();
 		this.caparAnneeDAO = new CAparAnneeDaoImpl();
+<<<<<<< HEAD
 		this.stockVoitureRecenteDAO = new StockVoitureRecenteDAOImpl();
+=======
+		this.recordSaleDAO = new EnregistrerVenteDAOImpl();
+		this.crudPiecesDAO = new PiecesDAOImpl();
+		this.stockVoitureRecenteDAO = new StockVoitureRecenteDAOImpl();
+
+>>>>>>> main
 	}
 
 	public abstract boolean executer();

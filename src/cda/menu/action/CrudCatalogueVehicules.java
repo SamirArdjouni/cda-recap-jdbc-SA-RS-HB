@@ -36,7 +36,7 @@ public class CrudCatalogueVehicules extends Action {
 		case 1:
 			System.out.println("Saisissez la marque");
 			System.out.print("  < ");
-			String marque = new Scanner(System.in).next();
+			String marque = sc.next();
 
 			System.out.println("Saisissez l'année");
 			System.out.print("  < ");
