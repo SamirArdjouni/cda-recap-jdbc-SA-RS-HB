@@ -3,18 +3,21 @@ package cda.connexion;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class MyConnection {
 
-	private static String url = "jdbc:mysql://localhost:3306/cda_voiture?useSSL=false&serverTimezone=UTC";
-	private static String utilisateur = "user3";
-	private static String motDePasse = "user3";
 	private static Connection connexion = null;
 
 	private MyConnection() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connexion = DriverManager.getConnection(url, utilisateur, motDePasse);
+			Properties appProps = new Properties();
+			appProps.load(MyConnection.class.getResourceAsStream("/db.properties"));
+			connexion = DriverManager.getConnection(
+					appProps.getProperty("url"), 
+					appProps.getProperty("username"),
+					appProps.getProperty("password"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

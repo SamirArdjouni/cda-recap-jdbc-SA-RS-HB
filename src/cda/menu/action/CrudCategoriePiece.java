@@ -11,7 +11,7 @@ import cda.menu.model.Categorie;
 public class CrudCategoriePiece extends Action {
 
 	private static final int ID = 1;
-	private static final String DESC = "CRUD categorie piece";
+	private static final String DESC = "CRUD categories pièces";
 	
 	Scanner sc = new Scanner(System.in);
 	
@@ -27,6 +27,7 @@ public class CrudCategoriePiece extends Action {
 		System.out.println("2 : consulter une catégorie :");
 		System.out.println("3 : modifier une catégorie :");
 		System.out.println("4 : supprimer une catégorie :");
+		System.out.println("5 : exporter la table:");
 
 		int choix = IHM_INS.lireEntier();
 

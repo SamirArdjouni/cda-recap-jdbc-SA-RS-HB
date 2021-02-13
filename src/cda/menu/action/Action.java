@@ -26,6 +26,7 @@ public abstract class Action {
 	protected DateVentePieceDAO pieceDAO;
 	protected StockPiecesDAO stockPiecesDAO;
 	protected CAparAnneeDAO caparAnneeDAO;
+
 	protected StockVoitureRecenteDAO stockVoitureRecenteDAO; 
 	protected EnregistrerVenteDAO recordSaleDAO;
 	protected CrudPiecesDAO crudPiecesDAO;
@@ -38,6 +39,7 @@ public abstract class Action {
 		this.pieceDAO = new DateVentePieceDaoImpl();
 		this.stockPiecesDAO = new StockPiecesDaoImpl();
 		this.caparAnneeDAO = new CAparAnneeDaoImpl();
+
 		this.stockVoitureRecenteDAO = new StockVoitureRecenteDAOImpl();
 		this.recordSaleDAO = new EnregistrerVenteDAOImpl();
 		this.crudPiecesDAO = new PiecesDAOImpl();

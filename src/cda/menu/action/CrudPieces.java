@@ -8,11 +8,10 @@ import java.util.List;
 import java.util.Scanner;
 
 import cda.menu.model.Pieces;
-import cda.menu.model.Pieces;
 
 public class CrudPieces extends Action {
-	private static final int ID = 4;
-	private static final String DESC = "CRUD catalogue pièce";
+	private static final int ID = 2;
+	private static final String DESC = "CRUD catalogue pièces";
 
 	Scanner sc = new Scanner(System.in);
 
