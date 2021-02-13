@@ -9,6 +9,6 @@ public interface LesActions {
 	public static final StockPieces STOCK_PIECES = new StockPieces();
 	public static final CAparAnnee CA_PAR_ANNEE = new CAparAnnee();
 	public static final EnregistrerVente ENREGISTRER_VENTE = new EnregistrerVente();
-	
+	public static final CrudPieces CRUD_PIECES= new CrudPieces();
 
 }

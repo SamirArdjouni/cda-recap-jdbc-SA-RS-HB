@@ -2,6 +2,8 @@ package cda.zprog;
 
 import static cda.menu.ihm.Ihm.IHM_INS;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.TreeMap;
 
 import cda.menu.action.Action;
@@ -10,6 +12,7 @@ import cda.menu.action.LesActions;
 public class zprog {
 
 	public static void main(String[] args) {
+		
 		TreeMap<Integer, Action> actions = new TreeMap<>();
 		ajouterAction(actions, LesActions.ACTION_INTROUVABLE);
 		ajouterAction(actions, LesActions.QUITTER);
@@ -19,6 +22,8 @@ public class zprog {
 		ajouterAction(actions, LesActions.STOCK_PIECES);
 		ajouterAction(actions, LesActions.CA_PAR_ANNEE);
 		ajouterAction(actions, LesActions.ENREGISTRER_VENTE);
+		ajouterAction(actions, LesActions.CRUD_PIECES);
+
 
 		boolean vContinuer;
 		int vActionSaisie;
