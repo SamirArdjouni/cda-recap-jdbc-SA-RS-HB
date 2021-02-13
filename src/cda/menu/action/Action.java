@@ -12,7 +12,7 @@ import cda.menu.model.impl.CatalogueVehiculesDaoImpl;
 import cda.menu.model.impl.CategorieDaoImpl;
 import cda.menu.model.impl.DateVentePieceDaoImpl;
 import cda.menu.model.impl.EnregistrerVenteDAOImpl;
-import cda.menu.model.impl.PiecesDaoImpl;
+import cda.menu.model.impl.PiecesDAOImpl;
 import cda.menu.model.impl.StockPiecesDaoImpl;
 
 public abstract class Action {
@@ -36,7 +36,7 @@ public abstract class Action {
 		this.stockPiecesDAO = new StockPiecesDaoImpl();
 		this.caparAnneeDAO = new CAparAnneeDaoImpl();
 		this.recordSaleDAO = new EnregistrerVenteDAOImpl();
-		this.crudPiecesDAO = new PiecesDaoImpl();
+		this.crudPiecesDAO = new PiecesDAOImpl();
 
 	}
 

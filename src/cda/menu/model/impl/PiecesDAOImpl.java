@@ -10,9 +10,8 @@ import java.util.List;
 import cda.Dao.CrudPiecesDAO;
 import cda.connexion.MyConnection;
 import cda.menu.model.Pieces;
-import cda.menu.model.Pieces;
 
-public class PiecesDaoImpl implements CrudPiecesDAO {
+public class PiecesDAOImpl implements CrudPiecesDAO {
 
 	@Override
 	public Pieces AjouterPièce(Pieces piece) {
