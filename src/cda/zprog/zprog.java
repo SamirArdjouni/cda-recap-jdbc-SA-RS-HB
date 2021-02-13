@@ -14,27 +14,17 @@ public class zprog {
 	public static void main(String[] args) {
 		
 		TreeMap<Integer, Action> actions = new TreeMap<>();
-		ajouterAction(actions, LesActions.ACTION_INTROUVABLE);
+		//ajouterAction(actions, LesActions.ACTION_INTROUVABLE);
 		ajouterAction(actions, LesActions.QUITTER);
 		ajouterAction(actions, LesActions.CRUD_CATEGORIE_PIECE);
 		ajouterAction(actions, LesActions.CRUD_CATALOGUE_VEHICULES);
 		ajouterAction(actions, LesActions.DATE_VENTE_PIECE);
 		ajouterAction(actions, LesActions.STOCK_PIECES);
 		ajouterAction(actions, LesActions.CA_PAR_ANNEE);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-		ajouterAction(actions, LesActions.STOCK_VOITURE_RECENTE); // sam
-=======
->>>>>>> dev-samir
 		ajouterAction(actions, LesActions.ENREGISTRER_VENTE);
 		ajouterAction(actions, LesActions.CRUD_PIECES);
 		ajouterAction(actions, LesActions.STOCK_VOITURE_RECENTE);
 
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> dev-samir
 
 		boolean vContinuer;
 		int vActionSaisie;
