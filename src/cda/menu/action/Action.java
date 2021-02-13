@@ -14,6 +14,7 @@ import cda.menu.model.impl.DateVentePieceDaoImpl;
 import cda.menu.model.impl.EnregistrerVenteDAOImpl;
 import cda.menu.model.impl.PiecesDAOImpl;
 import cda.menu.model.impl.StockPiecesDaoImpl;
+import cda.menu.model.impl.StockVoitureRecenteDAOImpl;
 
 public abstract class Action {
 
@@ -37,6 +38,7 @@ public abstract class Action {
 		this.caparAnneeDAO = new CAparAnneeDaoImpl();
 		this.recordSaleDAO = new EnregistrerVenteDAOImpl();
 		this.crudPiecesDAO = new PiecesDAOImpl();
+		this.stockVoitureRecenteDAO = new StockVoitureRecenteDAOImpl();
 
 	}
 

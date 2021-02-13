@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class MyConnection {
 
-	private static String url = "jdbc:mysql://localhost:3306/exo1?useSSL=false&serverTimezone=UTC";
-	private static String utilisateur = "user1";
-	private static String motDePasse = "user1pwd";
+	private static String url = "jdbc:mysql://localhost:3306/cda_voiture?useSSL=false&serverTimezone=UTC";
+	private static String utilisateur = "user3";
+	private static String motDePasse = "user3";
 	private static Connection connexion = null;
 
 	private MyConnection() {

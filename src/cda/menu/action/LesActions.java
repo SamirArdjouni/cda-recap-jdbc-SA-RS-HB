@@ -10,5 +10,5 @@ public interface LesActions {
 	public static final CAparAnnee CA_PAR_ANNEE = new CAparAnnee();
 	public static final EnregistrerVente ENREGISTRER_VENTE = new EnregistrerVente();
 	public static final CrudPieces CRUD_PIECES= new CrudPieces();
-
+	public static final StockVoitureRecente STOCK_VOITURE_RECENTE = new StockVoitureRecente();
 }

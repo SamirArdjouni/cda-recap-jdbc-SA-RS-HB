@@ -23,6 +23,7 @@ public class zprog {
 		ajouterAction(actions, LesActions.CA_PAR_ANNEE);
 		ajouterAction(actions, LesActions.ENREGISTRER_VENTE);
 		ajouterAction(actions, LesActions.CRUD_PIECES);
+		ajouterAction(actions, LesActions.STOCK_VOITURE_RECENTE);
 
 
 		boolean vContinuer;
