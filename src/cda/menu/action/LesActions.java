@@ -11,6 +11,5 @@ public interface LesActions {
 	public static final StockVoitureRecente STOCK_VOITURE_RECENTE = new StockVoitureRecente();// sam
 	public static final EnregistrerVente ENREGISTRER_VENTE = new EnregistrerVente();
 	public static final CrudPieces CRUD_PIECES= new CrudPieces();
-	public static final StockVoitureRecente STOCK_VOITURE_RECENTE = new StockVoitureRecente();
 }
  
