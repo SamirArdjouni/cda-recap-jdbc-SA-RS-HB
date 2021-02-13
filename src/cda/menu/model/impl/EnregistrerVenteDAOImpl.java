@@ -24,7 +24,7 @@ public class EnregistrerVenteDAOImpl implements EnregistrerVenteDAO {
 
 		if (c != null) {
 			try {
-				PreparedStatement statement = c.prepareStatement("SELECT reference, prixUnitaire, quantite FROM pieces where reference =? order by reference;");
+				PreparedStatement statement = c.prepareStatement("SELECT IdPieces ,reference, prixUnitaire, quantite FROM pieces where reference =? order by reference;");
 				statement.setString(1, referenceRecherchee);				
 				ResultSet r = statement.executeQuery();
 				

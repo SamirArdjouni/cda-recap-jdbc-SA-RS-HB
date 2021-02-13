@@ -77,6 +77,7 @@ public class Pieces {
 		return "Pieces [idPieces=" + idPieces + ", reference=" + reference + ", categorie=" + categorie + ", dateRecup="
 				+ dateRecup + ", quantite=" + quantite + "]";
 	}
+	
 	public float getPrixUnitaire() {
 		return prixUnitaire;
 	}
