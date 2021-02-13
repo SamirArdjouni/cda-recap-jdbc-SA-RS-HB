@@ -26,12 +26,9 @@ public abstract class Action {
 	protected DateVentePieceDAO pieceDAO;
 	protected StockPiecesDAO stockPiecesDAO;
 	protected CAparAnneeDAO caparAnneeDAO;
-<<<<<<< HEAD
 	protected StockVoitureRecenteDAO stockVoitureRecenteDAO; 
-=======
 	protected EnregistrerVenteDAO recordSaleDAO;
 	protected CrudPiecesDAO crudPiecesDAO;
->>>>>>> main
 
 	protected Action(int pId, String pDescription) {
 		this.id = pId;
@@ -41,14 +38,9 @@ public abstract class Action {
 		this.pieceDAO = new DateVentePieceDaoImpl();
 		this.stockPiecesDAO = new StockPiecesDaoImpl();
 		this.caparAnneeDAO = new CAparAnneeDaoImpl();
-<<<<<<< HEAD
 		this.stockVoitureRecenteDAO = new StockVoitureRecenteDAOImpl();
-=======
 		this.recordSaleDAO = new EnregistrerVenteDAOImpl();
 		this.crudPiecesDAO = new PiecesDAOImpl();
-		this.stockVoitureRecenteDAO = new StockVoitureRecenteDAOImpl();
-
->>>>>>> main
 	}
 
 	public abstract boolean executer();

@@ -8,12 +8,9 @@ public interface LesActions {
 	public static final DateVentePiece DATE_VENTE_PIECE = new DateVentePiece();
 	public static final StockPieces STOCK_PIECES = new StockPieces();
 	public static final CAparAnnee CA_PAR_ANNEE = new CAparAnnee();
-<<<<<<< HEAD
 	public static final StockVoitureRecente STOCK_VOITURE_RECENTE = new StockVoitureRecente();// sam
-=======
 	public static final EnregistrerVente ENREGISTRER_VENTE = new EnregistrerVente();
 	public static final CrudPieces CRUD_PIECES= new CrudPieces();
 	public static final StockVoitureRecente STOCK_VOITURE_RECENTE = new StockVoitureRecente();
->>>>>>> main
 }
  
