@@ -10,27 +10,27 @@ import java.util.List;
 import cda.Dao.EnregistrerVenteDAO;
 import cda.connexion.MyConnection;
 import cda.menu.model.Pieces;
-import cda.menu.model.Vente;
 
 public class EnregistrerVenteDAOImpl implements EnregistrerVenteDAO {
 
-
 	@Override
-	public  List<Pieces> afficherPiecesVendues(String referenceRecherchee){
+	public List<Pieces> afficherPiecesVendues(String reference) {
 
 		List<Pieces> piecesVendues = new ArrayList<>();
-
 		Connection c = MyConnection.getConnection();
 
 		if (c != null) {
 			try {
-				PreparedStatement statement = c.prepareStatement("SELECT reference, prixUnitaire, quantite FROM pieces where reference =? order by reference;");
-				statement.setString(1, referenceRecherchee);				
+				PreparedStatement statement = c.prepareStatement(
+						"SELECT reference, prixUnitaire, quantite FROM pieces where reference =? order by reference;");
+
+				statement.setString(1, reference);
 				ResultSet r = statement.executeQuery();
-				
-				
+
 				while (r.next()) {
-					piecesVendues.add(new Pieces(r.getString("reference"),r.getInt("prixUnitaire"),r.getInt("quantite")));
+					piecesVendues
+							.add(new Pieces(r.getString("reference"), r.getInt("prixUnitaire"), r.getInt("quantite")));
+
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -39,19 +39,14 @@ public class EnregistrerVenteDAOImpl implements EnregistrerVenteDAO {
 		return piecesVendues;
 	}
 
-
 	@Override
 	public void modifierDateVente(String ancienneDate, String nouvelleDate) {
-		// TODO Auto-generated method stub
-		
+
 	}
-
-
 
 	@Override
 	public void enregistrerUneVente(int reference, float prixUnitaire, int quantite) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 }

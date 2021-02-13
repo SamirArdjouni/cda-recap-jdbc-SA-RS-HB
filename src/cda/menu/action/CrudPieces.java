@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import cda.menu.model.Pieces;
-import cda.menu.model.Pieces2;
+import cda.menu.model.Pieces;
 
 public class CrudPieces extends Action {
 	private static final int ID = 4;
@@ -56,8 +56,8 @@ public class CrudPieces extends Action {
 
 			String date = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
-			Pieces2 c = this.crudPiecesDAO
-					.AjouterPièce(new Pieces2(reference, idCategorie, date, prixUnitaire, quantite, idVehicule));
+			Pieces c = this.crudPiecesDAO
+					.AjouterPièce(new Pieces(reference, idCategorie, date, prixUnitaire, quantite, idVehicule));
 
 			if (c != null) {
 				System.out.println("  > Categorie ajouté avec succès ");
@@ -65,7 +65,7 @@ public class CrudPieces extends Action {
 			break;
 
 		case 2:
-			List<Pieces2> catalogue = this.crudPiecesDAO.ConsulterPieces();
+			List<Pieces> catalogue = this.crudPiecesDAO.ConsulterPieces();
 			if (catalogue.isEmpty()) {
 
 				System.out.println("  > aucun pièce n'est dans la BDD !");
@@ -102,7 +102,7 @@ public class CrudPieces extends Action {
 			int newIdVehicule = sc.nextInt();
 
 			boolean isModif = this.crudPiecesDAO.ModifierPiece(
-					new Pieces2(Newref, newCat, newPrixUnitaire, newQuantite, newIdVehicule, pieceToModif));
+					new Pieces(Newref, newCat, newPrixUnitaire, newQuantite, newIdVehicule, pieceToModif));
 
 			if (isModif) {
 				System.out.println("  > pièce modifiée avec succès !");

@@ -2,15 +2,15 @@ package cda.Dao;
 
 import java.util.List;
 
-import cda.menu.model.Pieces2;
+import cda.menu.model.Pieces;
 
 public interface CrudPiecesDAO {
 
-	Pieces2 AjouterPièce(Pieces2 piece);
+	Pieces AjouterPièce(Pieces piece);
 
-	List<Pieces2> ConsulterPieces();
+	List<Pieces> ConsulterPieces();
 
-	boolean ModifierPiece(Pieces2 piece);
+	boolean ModifierPiece(Pieces piece);
 
 	boolean SupprimerPiece(String idPieces);
 }
