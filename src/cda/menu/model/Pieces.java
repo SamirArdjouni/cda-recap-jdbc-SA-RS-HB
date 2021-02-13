@@ -1,89 +1,110 @@
 package cda.menu.model;
 
-import java.util.Date;
-
 public class Pieces {
 
 	private int idPieces;
-	private int reference;
-	private String referenceString;
+	private String reference;
 	private String categorie;
-	private Date dateRecup;
+	private String dateRecup;
+	private int prixUnitaire;
 	private int quantite;
-	private float prixUnitaire;
-	
+	private int idVehicule;
+	private String newreference;
+	private String newcategorie;
+	private int newprixUnitaire;
+	private int newquantite;
+	private int newidVehicule;
 
+	public Pieces(String newreference, String newcategorie, int newprixUnitaire, int newquantite, int newidVehicule,
+			int idPieces) {
+		this.newreference = newreference;
+		this.newcategorie = newcategorie;
+		this.newprixUnitaire = newprixUnitaire;
+		this.newquantite = newquantite;
+		this.newidVehicule = newidVehicule;
+		this.idPieces = idPieces;
+	}
 
-	public Pieces(int idPieces, int reference, String categorie, Date dateRecup, int quantite) {
-		
+	public Pieces(String reference, String categorie, String dateRecup, int prixUnitaire, int quantite,
+			int idVehicule) {
+		this.reference = reference;
+		this.categorie = categorie;
+		this.dateRecup = dateRecup;
+		this.prixUnitaire = prixUnitaire;
+		this.quantite = quantite;
+
+	}
+
+	public Pieces(int idPieces, String reference, String categorie, String dateRecup, int prixUnitaire, int quantite,
+			int idVehicule) {
 		this.idPieces = idPieces;
 		this.reference = reference;
 		this.categorie = categorie;
 		this.dateRecup = dateRecup;
+		this.prixUnitaire = prixUnitaire;
 		this.quantite = quantite;
-		
+		this.idVehicule = idVehicule;
 	}
 
-	public Pieces(String referenceString, float prixUnitaire, int quantite) {
-		this.referenceString = referenceString;
-		this.prixUnitaire =prixUnitaire;
+	public Pieces(String reference, int prixUnitaire, int quantite) {
+		this.reference = reference;
+		this.prixUnitaire = prixUnitaire;
 		this.quantite = quantite;
 	}
-
-
 
 	public int getIdPieces() {
 		return idPieces;
 	}
 
-	public void setIdPieces(int idPieces) {
-		this.idPieces = idPieces;
-	}
-
-	public int getReference() {
+	public String getReference() {
 		return reference;
-	}
-
-	public void setReference(int reference) {
-		this.reference = reference;
 	}
 
 	public String getCategorie() {
 		return categorie;
 	}
 
-	public void setCategorie(String categorie) {
-		this.categorie = categorie;
-	}
-
-	public Date getDateRecup() {
+	public String getDateRecup() {
 		return dateRecup;
 	}
 
-	public void setDateRecup(Date dateRecup) {
-		this.dateRecup = dateRecup;
+	public int getPrixUnitaire() {
+		return prixUnitaire;
 	}
 
 	public int getQuantite() {
 		return quantite;
 	}
 
-	public void setQuantite(int quantite) {
-		this.quantite = quantite;
+	public int getIdVehicule() {
+		return idVehicule;
+	}
+
+	public String getNewreference() {
+		return newreference;
+	}
+
+	public String getNewcategorie() {
+		return newcategorie;
+	}
+
+	public int getNewprixUnitaire() {
+		return newprixUnitaire;
+	}
+
+	public int getNewquantite() {
+		return newquantite;
+	}
+
+	public int getNewidVehicule() {
+		return newidVehicule;
 	}
 
 	@Override
 	public String toString() {
-		return "Pieces [idPieces=" + idPieces + ", reference=" + reference + ", categorie=" + categorie + ", dateRecup="
-				+ dateRecup + ", quantite=" + quantite + "]";
-	}
-	
-	public float getPrixUnitaire() {
-		return prixUnitaire;
+		return "Pieces [idPiece= " + idPieces + "\t categorie= " + categorie + "\t date= " + dateRecup
+				+ "\t prixUnitaire= " + prixUnitaire + "\t quantite= " + quantite + "\t idVehicule= " + idVehicule
+				+ "\t ref= " + reference + "]";
 	}
 
-	public void setPrixUnitaire(float prixUnitaire) {
-		this.prixUnitaire = prixUnitaire;
-	}
-	
 }
