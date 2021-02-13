@@ -10,11 +10,12 @@ import java.util.List;
 import cda.Dao.CrudPiecesDAO;
 import cda.connexion.MyConnection;
 import cda.menu.model.Pieces;
+import cda.menu.model.Pieces2;
 
 public class PiecesDaoImpl implements CrudPiecesDAO {
 
 	@Override
-	public Pieces AjouterPièce(Pieces piece) {
+	public Pieces2 AjouterPièce(Pieces2 piece) {
 		Connection c = MyConnection.getConnection();
 		if (c != null) {
 			try {
@@ -41,8 +42,8 @@ public class PiecesDaoImpl implements CrudPiecesDAO {
 	}
 
 	@Override
-	public List<Pieces> ConsulterPieces() {
-		List<Pieces> pieces = new ArrayList<>();
+	public List<Pieces2> ConsulterPieces() {
+		List<Pieces2> pieces = new ArrayList<>();
 		Connection c = MyConnection.getConnection();
 
 		if (c != null) {
@@ -51,7 +52,7 @@ public class PiecesDaoImpl implements CrudPiecesDAO {
 				ResultSet r = statement.executeQuery();
 
 				while (r.next()) {
-					pieces.add(new Pieces(r.getInt("idPieces"), r.getString("reference"), r.getString("idCategorie"),
+					pieces.add(new Pieces2(r.getInt("idPieces"), r.getString("reference"), r.getString("idCategorie"),
 							r.getString("dateRecup"), r.getInt("prixUnitaire"), r.getInt("quantite"),
 							r.getInt("idVehicule")));
 				}
@@ -63,7 +64,7 @@ public class PiecesDaoImpl implements CrudPiecesDAO {
 	}
 
 	@Override
-	public boolean ModifierPiece(Pieces piece) {
+	public boolean ModifierPiece(Pieces2 piece) {
 		Connection c = MyConnection.getConnection();
 		if (c != null) {
 			try {
