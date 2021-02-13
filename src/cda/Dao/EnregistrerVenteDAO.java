@@ -2,8 +2,6 @@ package cda.Dao;
 
 import java.util.List;
 
-import cda.menu.model.Pieces;
-
 public interface EnregistrerVenteDAO {
 
 	List<Pieces> afficherPiecesVendues(String reference);
