@@ -6,6 +6,8 @@ import static cda.menu.ihm.Ihm.IHM_INS;
 import java.util.List;
 import java.util.Scanner;
 
+import cda.Dao.CrudCategoriePieceDAO;
+import cda.exports.ExportFormatExcel;
 import cda.menu.model.Categorie;
 
 public class CrudCategoriePiece extends Action {
@@ -85,6 +87,9 @@ public class CrudCategoriePiece extends Action {
 			} else {
 				System.out.println("  > ! ERREUR : il n'y pas de categorie actuellement dans la table !");
 			}
+			break;
+		case 5://ici on met la fonction export Excel
+			ExportFormatExcel.exportCategorie();
 			break;
 		default:
 			break;

@@ -8,7 +8,7 @@ public interface CrudCategoriePieceDAO {
 
 	Categorie CreerCategorie(Categorie categorie);
 
-	List<Categorie> ConsulterCategorie();
+	 List<Categorie> ConsulterCategorie();
 
 	boolean ModifierCategorie(Categorie categorie);
 
